@@ -2,6 +2,12 @@ import React, { useState, useEffect } from "react";
 import Sidebar from "./components/sidebar/Sidebar";
 import "./App.css";
 import PatientList from "./pages/PatientList";
+import Overview from "./pages/Overview";
+import Messages from "./pages/Messages";
+import PaymentInfo from "./pages/PaymentInfo";
+import Calender from "./pages/Calender";
+import Settings from "./pages/Settings";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
   const [patient, setPatient] = useState({});
@@ -38,10 +44,28 @@ function App() {
     fetchFiles();
   }, []);
   return (
-    <div className="Main_container">
-      <Sidebar doctor={doctor} />
-      <PatientList patient={patient} appointment={appointment} files={files} />
-    </div>
+    <Router>
+      <div className="Main_container">
+        <Sidebar doctor={doctor} />
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <PatientList
+                patient={patient}
+                appointment={appointment}
+                files={files}
+              />
+            }
+          />
+          <Route path="/overview" element={<Overview />} />
+          <Route path="/calender" element={<Calender />} />
+          <Route path="/paymentinfo" element={<PaymentInfo />} />
+          <Route path="/messages" element={<Messages />} />
+          <Route path="/settings" element={<Settings />} />
+        </Routes>
+      </div>
+    </Router>
   );
 }
 

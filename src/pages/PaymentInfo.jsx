@@ -2,7 +2,7 @@ import React from 'react'
 
 const PaymentInfo = () => {
   return (
-    <div>PaymentInfo</div>
+    <div style={{flex:"9"}}>PaymentInfo</div>
   )
 }
 

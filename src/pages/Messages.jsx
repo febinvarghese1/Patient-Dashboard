@@ -2,7 +2,7 @@ import React from 'react'
 
 const Messages = () => {
   return (
-    <div>Messages</div>
+    <div style={{flex:"9"}}> Messages</div>
   )
 }
 

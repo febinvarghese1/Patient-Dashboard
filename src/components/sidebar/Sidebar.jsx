@@ -2,61 +2,90 @@ import React from "react";
 import "./Sidebar.css";
 import { SiSpeedtest } from "react-icons/si";
 import { FaCalendarAlt, FaUserAlt } from "react-icons/fa";
-import { BiMessageRoundedDetail, BiMoney,BiQuestionMark} from "react-icons/bi";
-import { GoSettings,GoInfo } from "react-icons/go";
-import {AiOutlineMenuFold} from "react-icons/ai";
+import {
+  BiMessageRoundedDetail,
+  BiMoney,
+  BiQuestionMark,
+} from "react-icons/bi";
+import { GoSettings, GoInfo } from "react-icons/go";
+import { AiOutlineMenuFold } from "react-icons/ai";
 import docimg from "../../images/avatar.png";
-const Sidebar = ({doctor}) => {
+import { Link } from "react-router-dom";
+
+const Sidebar = ({ doctor }) => {
   return (
     <div className="sidebar_container">
-      <div className="sidebar_top_container"><h1>KrishWorks</h1><i><AiOutlineMenuFold /></i></div>
+      <div className="sidebar_top_container">
+        <h1>KrishWorks</h1>
+        <i>
+          <AiOutlineMenuFold />
+        </i>
+      </div>
       <div className="sidebar_wrapper">
         <ul className="sidebar_list_container">
           <li className="sidebar_list_item">
             <i>
               <SiSpeedtest />
             </i>
-            Overview
+            <Link className="link" to="/overview">
+              Overview
+            </Link>
           </li>
           <li className="sidebar_list_item">
             <i>
               <FaCalendarAlt />
             </i>
-            Calendar
+
+            <Link className="link" to="/calender">
+              Calendar
+            </Link>
           </li>
           <li className="sidebar_list_item">
             <i>
               <FaUserAlt />
             </i>
-            Patient List
+            <Link className="link" to="/">
+              Patient List
+            </Link>
           </li>
           <li className="sidebar_list_item">
             <i>
-              {" "}
               <BiMessageRoundedDetail />
             </i>
-            Messages
+            <Link className="link" to="/messages">
+              Messages
+            </Link>
           </li>
           <li className="sidebar_list_item">
             <i>
               <BiMoney />
             </i>
-            Payment information
+            <Link className="link" to="/paymentinfo">
+              Payment information
+            </Link>
           </li>
           <li className="sidebar_list_item">
             <i>
               <GoSettings />
             </i>{" "}
-            Settings
+            <Link className="link" to="/settings">
+              Settings
+            </Link>
           </li>
         </ul>
         <div className="sidebar_end_container">
           <div className="sidebar_help_container">
-          <i><GoInfo/></i><h3>Help</h3> <i><BiQuestionMark/></i>
-          <br />
+            <i>
+              <GoInfo />
+            </i>
+            <h3>Help</h3>{" "}
+            <i>
+              <BiQuestionMark />
+            </i>
+            <br />
           </div>
           <div className="sidebar_doctor_container">
-            <img src={docimg} className="sidebar_image" alt=""/>
+            <img src={docimg} className="sidebar_image" alt="" />
             <div>
               <h5>{doctor.name}</h5>
               <span>{doctor.specification}</span>

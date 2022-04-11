@@ -3,7 +3,7 @@ import "./NavBar.css";
 import { AiOutlineUser } from "react-icons/ai";
 import { GrNotification, GrSearch } from "react-icons/gr";
 import { IoAddCircleSharp } from "react-icons/io5";
-import { BiRightArrow,BiPrinter,BiEdit} from "react-icons/bi";
+import { BiRightArrow, BiPrinter, BiEdit } from "react-icons/bi";
 const NavBar = () => {
   return (
     <div className="navbar_container">
@@ -29,14 +29,20 @@ const NavBar = () => {
       </div>
       <div className="navbar_bottom_wrapper">
         <div className="navbar_bottom_left_container">
-          <h1 style={{color:"blue"}}>Patient List</h1>
-          <i><BiRightArrow /></i>
+          <h1 style={{ color: "blue" }}>Patient List</h1>
+          <i>
+            <BiRightArrow />
+          </i>
           <h1>Diane Cooper</h1>
         </div>
         <div className="navbar_right_container">
-          <i className="navbar_bottom_printer"><BiPrinter/></i>
+          <i className="navbar_bottom_printer">
+            <BiPrinter />
+          </i>
           <button className="navbar_bottom_button">
-            <i><BiEdit /></i>
+            <i>
+              <BiEdit />
+            </i>
             <span>Edit Patient</span>
           </button>
         </div>
