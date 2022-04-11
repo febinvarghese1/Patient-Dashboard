@@ -16,22 +16,22 @@ function App() {
   const [files, setFiles] = useState([]);
 
   const fetchUser = async () => {
-    const response = await fetch(process.env.REACT_APP_URL_USER);
+    const response = await fetch("https://619f39821ac52a0017ba467e.mockapi.io/patientDetails");
     const data = await response.json();
     setPatient(data[0]);
   };
   const fetchDoctor = async () => {
-    const response = await fetch(process.env.REACT_APP_URL_DOCTOR);
+    const response = await fetch("https://619f39821ac52a0017ba467e.mockapi.io/DoctorDetails");
     const data = await response.json();
     setDoctor(data[0]);
   };
   const fetchAppoint = async () => {
-    const response = await fetch(process.env.REACT_APP_URL_APP);
+    const response = await fetch("https://619f39821ac52a0017ba467e.mockapi.io/appointment_details");
     const data = await response.json();
     setAppointment(data[0]["Upcoming Appointments"]);
   };
   const fetchFiles = async () => {
-    const response = await fetch(process.env.REACT_APP_URL_FILE);
+    const response = await fetch("https://619f39821ac52a0017ba467e.mockapi.io/Files");
     const data = await response.json();
     console.log(data);
     setFiles(data[0].files);
