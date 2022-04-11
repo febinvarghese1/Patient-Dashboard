@@ -2,7 +2,8 @@
   flex: 6;
   box-shadow: 2px 3px 16px rgba(0, 0, 0, 0.45);
   padding: 30px;
-  margin: 15px;
+  margin: 20px;
+  margin-left: 30px;
   background-color: white;
 }
 
@@ -44,8 +45,8 @@
 }
 
 .appointment_wrapper {
-  background-color: antiquewhite;
-  height: 150px;
+  background-color: aliceblue;
+  height: 170px;
 }
 .appointment_middle_container {
   margin: 0px 50px;

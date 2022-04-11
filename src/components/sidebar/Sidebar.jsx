@@ -9,7 +9,6 @@ import {
 } from "react-icons/bi";
 import { GoSettings, GoInfo } from "react-icons/go";
 import { AiOutlineMenuFold } from "react-icons/ai";
-import docimg from "../../images/avatar.png";
 import { Link } from "react-router-dom";
 
 const Sidebar = ({ doctor }) => {
@@ -85,7 +84,7 @@ const Sidebar = ({ doctor }) => {
             <br />
           </div>
           <div className="sidebar_doctor_container">
-            <img src={docimg} className="sidebar_image" alt="" />
+            <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" className="sidebar_image" alt="" />
             <div>
               <h5>{doctor.name}</h5>
               <span>{doctor.specification}</span>
